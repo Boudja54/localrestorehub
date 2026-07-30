@@ -1,0 +1,50 @@
+[
+  {
+    "slug": "ocala-fl",
+    "city": "Ocala",
+    "state": "FL",
+    "zip": "34471",
+    "county": "Marion County",
+    "emergency": "Mold Remediation",
+    "context": "Ocala sits in central Florida where humidity levels average above 75% year-round. Marion County has a high proportion of homes built before 2000, making them more susceptible to moisture intrusion and mold growth. The hot, humid climate creates ideal conditions for mold proliferation in attics, crawlspaces, and HVAC systems.",
+    "intro": "Discovering mold in your Ocala home is alarming. The combination of Florida's relentless humidity and aging housing stock means mold issues are unfortunately common here, but fast action can protect your family's health and your property.",
+    "steps": [
+      "Turn off your HVAC system immediately to prevent mold spores from spreading throughout your home.",
+      "Avoid touching or disturbing the mold — agitation releases spores into the air, worsening contamination.",
+      "Move vulnerable family members (children, elderly, allergy sufferers) to a different area or outside until professionals arrive."
+    ],
+    "phone": "555-0198"
+  },
+  {
+    "slug": "tyler-tx",
+    "city": "Tyler",
+    "state": "TX",
+    "zip": "75701",
+    "county": "Smith County",
+    "emergency": "Water Damage Extraction",
+    "context": "Tyler is located in East Texas, an area prone to severe thunderstorms, flash flooding, and occasional hurricanes. Smith County experiences some of the highest rainfall totals in the state. Additionally, aging plumbing infrastructure in mid-century homes puts Tyler residents at higher risk for burst pipes and sudden water damage events.",
+    "intro": "Water damage doesn't wait — and in Tyler, the combination of severe East Texas storms and aging home plumbing creates serious flooding risks. Every minute of delay increases structural damage and the likelihood of secondary mold growth.",
+    "steps": [
+      "Shut off the main water supply if the source is a burst pipe or plumbing failure.",
+      "Document the damage with photos and notes for your insurance claim before clean-up begins.",
+      "Remove valuable items, electronics, and documents from the affected area if it is safe to do so."
+    ],
+    "phone": "555-0198"
+  },
+  {
+    "slug": "lima-oh",
+    "city": "Lima",
+    "state": "OH",
+    "zip": "45801",
+    "county": "Allen County",
+    "emergency": "Sewage Backup Cleanup",
+    "context": "Lima is a classic Rust Belt community with much of its housing stock dating from the early to mid-20th century. Older sewer lines, combined with freeze-thaw cycles during harsh Ohio winters, make sewage backups a serious recurring problem in Allen County. Aging clay and cast-iron pipes are especially vulnerable to root intrusion and collapse.",
+    "intro": "A sewage backup is one of the most hazardous home emergencies you can face. In Lima, the combination of aging infrastructure and freezing Ohio winters makes sewer line failures a serious risk for many homeowners.",
+    "steps": [
+      "Evacuate the affected area immediately — sewage contains bacteria, viruses, and parasites that are dangerous to humans and pets.",
+      "Do not flush any toilets or run water — this will worsen the backup and spread contaminants further.",
+      "Shut off electricity to the affected rooms at the breaker panel if there is standing water."
+    ],
+    "phone": "555-0198"
+  }
+]

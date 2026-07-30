@@ -1,43 +1,55 @@
-# Astro Starter Kit: Minimal
+# LocalRestoreHub.com 🏠
 
-```sh
-npm create astro@latest -- --template minimal
+**Local Water Damage & Mold Remediation Directory — 24/7 US Response**
+
+An SEO-optimized static directory website built with [Astro](https://astro.build) + [Tailwind CSS](https://tailwindcss.com), deployable to Cloudflare Pages.
+
+## Tech Stack
+
+- **Framework:** Astro v7 (static output)
+- **Styling:** Tailwind CSS v4
+- **Content:** Markdown city pages + centralized JSON data
+- **Hosting:** Cloudflare Pages (via GitHub)
+
+## Project Structure
+
+```
+src/
+├── layouts/
+│   └── Layout.astro          # Main layout (header, footer, SEO meta)
+├── pages/
+│   ├── index.astro           # Homepage
+│   ├── about.astro           # About page
+│   ├── contact.astro         # Contact page
+│   ├── privacy-policy.astro  # Privacy Policy
+│   ├── terms-of-service.astro# Terms of Service
+│   └── cities/               # City pages (Markdown)
+│       ├── ocala-fl.md
+│       ├── tyler-tx.md
+│       └── lima-oh.md
+├── data/
+│   └── cities.json           # City data (source for new pages)
+└── styles/
+    └── global.css            # Tailwind imports + custom theme
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Adding New City Pages
 
-## 🚀 Project Structure
+1. Add city data to `src/data/cities.json`
+2. Create a new `.md` file in `src/pages/cities/` using the existing pages as template
+3. Run `npm run build` to generate static files
 
-Inside of your Astro project, you'll see the following folders and files:
+## Development
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+```bash
+npm run dev     # Start dev server
+npm run build   # Generate static output to dist/
+npm run preview # Preview built output
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Deployment
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+The `dist/` folder can be deployed to any static host. For Cloudflare Pages:
+1. Connect your GitHub repo
+2. Set build command: `npm run build`
+3. Set build output: `dist/`

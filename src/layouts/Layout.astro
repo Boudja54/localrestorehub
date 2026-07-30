@@ -1,0 +1,54 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, frontmatter, description: desc } = Astro.props;
+const pageTitle = title || frontmatter?.title || "US Emergency Local Hub";
+const pageDesc = desc || frontmatter?.description || "US Emergency Local Hub — Connecting you with verified local restoration experts 24/7";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={pageDesc} />
+    <title>{pageTitle}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <style>@import "../styles/global.css";</style>
+  </head>
+  <body class="bg-bg-light text-gray-900 font-sans antialiased flex flex-col min-h-screen">
+    <!-- Header -->
+    <header class="bg-primary text-white shadow-md">
+      <nav class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+        <a href="/" class="text-xl font-bold tracking-tight hover:text-gray-200 transition">
+          🏠 US Emergency Local Hub
+        </a>
+        <div class="flex gap-6 text-sm font-medium">
+          <a href="/" class="hover:text-gray-300 transition">Home</a>
+          <a href="/#how-it-works" class="hover:text-gray-300 transition">How It Works</a>
+          <a href="/about" class="hover:text-gray-300 transition">About</a>
+          <a href="/contact" class="hover:text-gray-300 transition">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1">
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-gray-300 text-sm">
+      <div class="max-w-6xl mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p>&copy; {new Date().getFullYear()} US Emergency Local Hub. All rights reserved.</p>
+        <div class="flex gap-4">
+          <a href="/privacy-policy" class="hover:text-white transition">Privacy Policy</a>
+          <a href="/terms-of-service" class="hover:text-white transition">Terms of Service</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
