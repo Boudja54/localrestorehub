@@ -8,3 +8,17 @@
   --color-bg-light: #f8fafc;
   --color-gray-soft: #f1f5f9;
 }
+
+/* City pages — responsive spacing */
+main h1, main h2, main h3 {
+  @apply text-balance;
+}
+main p, main ul, main ol {
+  @apply leading-relaxed;
+}
+main blockquote {
+  @apply border-l-4 border-accent bg-accent/5 pl-4 py-3 pr-3 my-6 rounded-r-lg text-accent font-semibold;
+}
+main ul {
+  @apply list-disc pl-5 space-y-2;
+}
