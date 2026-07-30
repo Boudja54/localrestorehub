@@ -22,4 +22,6 @@ Tyler is located in East Texas, an area prone to severe thunderstorms, flash flo
 
 > **Need immediate help in Tyler? Call our 24/7 local dispatch now: 555-0198**
 
+*By calling this number, you consent to being connected with a third-party service provider and to the recording of your call for quality assurance and compliance purposes. Read our [Privacy Policy](/privacy-policy) for full TCPA &amp; CCPA disclosures.*
+
 Our operators are standing by to connect you with verified water damage extraction experts serving Smith County and the Tyler area. Fast action minimizes damage and prevents secondary mold issues.

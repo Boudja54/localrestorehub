@@ -22,4 +22,6 @@ Lima is a classic Rust Belt community with much of its housing stock dating from
 
 > **Need immediate help in Lima? Call our 24/7 local dispatch now: 555-0198**
 
+*By calling this number, you consent to being connected with a third-party service provider and to the recording of your call for quality assurance and compliance purposes. Read our [Privacy Policy](/privacy-policy) for full TCPA &amp; CCPA disclosures.*
+
 Our operators are standing by to connect you with verified sewage cleanup professionals serving Allen County and the Lima area. This is a biohazard situation — professional help is essential for safe remediation.

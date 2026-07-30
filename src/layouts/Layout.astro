@@ -42,11 +42,19 @@ const pageDesc = desc || frontmatter?.description || "US Emergency Local Hub —
 
     <!-- Footer -->
     <footer class="bg-primary text-gray-300 text-sm">
-      <div class="max-w-6xl mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
-        <p>&copy; {new Date().getFullYear()} US Emergency Local Hub. All rights reserved.</p>
-        <div class="flex gap-4">
-          <a href="/privacy-policy" class="hover:text-white transition">Privacy Policy</a>
-          <a href="/terms-of-service" class="hover:text-white transition">Terms of Service</a>
+      <div class="max-w-6xl mx-auto px-4 py-8">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-4">
+          <p>&copy; {new Date().getFullYear()} US Emergency Local Hub. All rights reserved.</p>
+          <div class="flex gap-4">
+            <a href="/privacy-policy" class="hover:text-white transition">Privacy Policy</a>
+            <a href="/terms-of-service" class="hover:text-white transition">Terms of Service</a>
+            <a href="/contact" class="hover:text-white transition">Contact</a>
+          </div>
+        </div>
+        <!-- TCPA Compliance Notice -->
+        <div class="border-t border-primary-light/30 pt-4 mt-2 text-xs text-gray-400 leading-relaxed text-center md:text-left">
+          <p><strong>TCPA Consent Notice:</strong> By calling any telephone number displayed on this website, you expressly consent to being connected with third-party service providers and to the recording and/or monitoring of your call for quality assurance, training, and compliance purposes. You also consent to receive follow-up communications regarding your service inquiry. Consent is not a condition of purchase. <a href="/privacy-policy" class="text-gray-300 hover:text-white underline">Learn more</a>.</p>
+          <p class="mt-2"><a href="/privacy-policy#ccpa-rights" class="text-gray-300 hover:text-white underline">Do Not Sell or Share My Personal Information (CCPA)</a></p>
         </div>
       </div>
     </footer>

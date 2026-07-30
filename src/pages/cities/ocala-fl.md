@@ -22,4 +22,6 @@ Ocala sits in central Florida where humidity levels average above 75% year-round
 
 > **Need immediate help in Ocala? Call our 24/7 local dispatch now: 555-0198**
 
+*By calling this number, you consent to being connected with a third-party service provider and to the recording of your call for quality assurance and compliance purposes. Read our [Privacy Policy](/privacy-policy) for full TCPA &amp; CCPA disclosures.*
+
 Our operators are standing by to connect you with verified mold remediation experts serving Marion County and the Ocala area. Don't wait — mold spreads rapidly in Florida's climate.
