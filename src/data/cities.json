@@ -1,49 +1,97 @@
 [
   {
-    "slug": "ocala-fl",
-    "city": "Ocala",
-    "state": "FL",
-    "zip": "34471",
-    "county": "Marion County",
-    "emergency": "Mold Remediation",
-    "context": "Ocala sits in central Florida where humidity levels average above 75% year-round. Marion County has a high proportion of homes built before 2000, making them more susceptible to moisture intrusion and mold growth. The hot, humid climate creates ideal conditions for mold proliferation in attics, crawlspaces, and HVAC systems.",
-    "intro": "Discovering mold in your Ocala home is alarming. The combination of Florida's relentless humidity and aging housing stock means mold issues are unfortunately common here, but fast action can protect your family's health and your property.",
+    "slug": "water-damage-repair-bardsdale-ca",
+    "city": "Bardsdale",
+    "state": "CA",
+    "zip": "93015",
+    "county": "Ventura County",
+    "emergency": "Water Damage Restoration",
+    "context": "Bardsdale sits in Ventura County's Santa Clara River Valley, where seasonal winter storms can quickly turn the river into a flood threat. The area's older farmhouse plumbing and well systems are especially vulnerable to pressure surges and pipe failures during heavy rain.",
+    "intro": "When water breaks through in Bardsdale, the damage spreads fast. Between the Santa Clara River's flood potential and aging rural plumbing, homeowners here face real water emergencies every winter — and fast action is the difference between a quick fix and a major repair.",
     "steps": [
-      "Turn off your HVAC system immediately to prevent mold spores from spreading throughout your home.",
-      "Avoid touching or disturbing the mold — agitation releases spores into the air, worsening contamination.",
-      "Move vulnerable family members (children, elderly, allergy sufferers) to a different area or outside until professionals arrive."
+      "Shut off the main water supply immediately if the source is a burst pipe or plumbing failure.",
+      "Document all damage with photos and notes for your insurance claim before any cleanup begins.",
+      "Move valuable items, electronics, and important documents to a dry, safe area if it is safe to do so."
     ],
     "phone": "+1 (844) 833-10-48"
   },
   {
-    "slug": "tyler-tx",
-    "city": "Tyler",
-    "state": "TX",
-    "zip": "75701",
-    "county": "Smith County",
-    "emergency": "Water Damage Extraction",
-    "context": "Tyler is located in East Texas, an area prone to severe thunderstorms, flash flooding, and occasional hurricanes. Smith County experiences some of the highest rainfall totals in the state. Additionally, aging plumbing infrastructure in mid-century homes puts Tyler residents at higher risk for burst pipes and sudden water damage events.",
-    "intro": "Water damage doesn't wait — and in Tyler, the combination of severe East Texas storms and aging home plumbing creates serious flooding risks. Every minute of delay increases structural damage and the likelihood of secondary mold growth.",
+    "slug": "water-damage-repair-somis-ca",
+    "city": "Somis",
+    "state": "CA",
+    "zip": "93066",
+    "county": "Ventura County",
+    "emergency": "Flood Cleanup",
+    "context": "Somis is a rural community in the Las Posas Valley, where heavy winter rain produces rapid runoff from surrounding hillsides. Many homes rely on older well pumps and septic systems that can fail without warning, sending water into living spaces.",
+    "intro": "A sudden water emergency in Somis can strike during any winter storm. Hillside runoff, aging well equipment, and isolated rural roads mean homeowners often need help fast — and a quick, professional response protects your floors, walls, and belongings.",
     "steps": [
-      "Shut off the main water supply if the source is a burst pipe or plumbing failure.",
-      "Document the damage with photos and notes for your insurance claim before clean-up begins.",
-      "Remove valuable items, electronics, and documents from the affected area if it is safe to do so."
+      "Turn off the main water valve and, if safe, the electricity in affected rooms at the breaker panel.",
+      "Photograph and video the damage for your insurance records before touching anything.",
+      "Lift furniture off wet flooring and remove rugs, boxes, and valuables from the affected area."
     ],
     "phone": "+1 (844) 833-10-48"
   },
   {
-    "slug": "lima-oh",
-    "city": "Lima",
-    "state": "OH",
-    "zip": "45801",
-    "county": "Allen County",
-    "emergency": "Sewage Backup Cleanup",
-    "context": "Lima is a classic Rust Belt community with much of its housing stock dating from the early to mid-20th century. Older sewer lines, combined with freeze-thaw cycles during harsh Ohio winters, make sewage backups a serious recurring problem in Allen County. Aging clay and cast-iron pipes are especially vulnerable to root intrusion and collapse.",
-    "intro": "A sewage backup is one of the most hazardous home emergencies you can face. In Lima, the combination of aging infrastructure and freezing Ohio winters makes sewer line failures a serious risk for many homeowners.",
+    "slug": "water-damage-repair-piru-ca",
+    "city": "Piru",
+    "state": "CA",
+    "zip": "93040",
+    "county": "Ventura County",
+    "emergency": "Emergency Water Extraction",
+    "context": "Piru lies along the Piru Creek watershed at the edge of the Los Padres National Forest. Flash flooding after heavy rain is a recurring seasonal risk, and the town's older infrastructure makes sudden pipe and water line failures a genuine concern for local homeowners.",
+    "intro": "In Piru, water emergencies often arrive without warning — a creek that jumps its banks, a failing water line, or a storm that overwhelms the drainage. When it happens, standing water inside your home needs to be extracted quickly to protect your property.",
     "steps": [
-      "Evacuate the affected area immediately — sewage contains bacteria, viruses, and parasites that are dangerous to humans and pets.",
-      "Do not flush any toilets or run water — this will worsen the backup and spread contaminants further.",
-      "Shut off electricity to the affected rooms at the breaker panel if there is standing water."
+      "Stay out of standing water and keep children and pets away from the affected area.",
+      "Shut off water at the main valve and electricity at the breaker if flooding is present.",
+      "Call for professional extraction as soon as it is safe — every hour of standing water increases the damage."
+    ],
+    "phone": "+1 (844) 833-10-48"
+  },
+  {
+    "slug": "water-damage-repair-littlerock-ca",
+    "city": "Littlerock",
+    "state": "CA",
+    "zip": "93543",
+    "county": "Los Angeles County",
+    "emergency": "Water Damage Restoration",
+    "context": "Littlerock sits in the high desert of the Antelope Valley, where summer monsoon storms and winter cloudbursts can drop heavy rain on dry ground, causing sudden flash flooding. Desert homes with older plumbing and well systems face unique water damage risks.",
+    "intro": "Water damage in Littlerock can come from a sudden desert storm or a failing well line. Because the high desert drains fast and hard, flooding here is often sudden and severe — which is why having a local water damage response line matters.",
+    "steps": [
+      "Move vehicles and valuables to higher ground if flooding is approaching.",
+      "Shut off the main water supply and electrical breakers if water has entered the home.",
+      "Document everything with photos and call for professional water extraction right away."
+    ],
+    "phone": "+1 (844) 833-10-48"
+  },
+  {
+    "slug": "water-damage-repair-acton-ca",
+    "city": "Acton",
+    "state": "CA",
+    "zip": "93510",
+    "county": "Los Angeles County",
+    "emergency": "Flood Cleanup",
+    "context": "Acton is a semi-rural high desert community at the base of the San Gabriel Mountains. Sudden thunderstorms send runoff down the foothills, and many homes on acreage rely on private wells and septic systems prone to sudden failure.",
+    "intro": "Between foothill runoff and aging well systems, Acton homeowners face real water emergencies. A flooded garage, a failed pressure tank, or a storm-swollen wash can leave you needing cleanup help in a hurry.",
+    "steps": [
+      "Shut off water at the well or main valve first — protect your water system from contamination.",
+      "Turn off power to any rooms with standing water.",
+      "Photograph damage for insurance and call for flood cleanup support immediately."
+    ],
+    "phone": "+1 (844) 833-10-48"
+  },
+  {
+    "slug": "water-damage-repair-valyermo-ca",
+    "city": "Valyermo",
+    "state": "CA",
+    "zip": "93563",
+    "county": "Los Angeles County",
+    "emergency": "Emergency Water Extraction",
+    "context": "Valyermo is a remote high desert community along Big Rock Creek below the San Gabriel Mountains. Sudden creek surges during storms and isolated well systems create real water emergencies for the homes scattered across this rugged terrain.",
+    "intro": "Living in Valyermo means living with the desert's extremes — including sudden water events. When a creek surge or a failed well line puts water in your home, remote locations make fast local help essential.",
+    "steps": [
+      "Keep everyone away from fast-moving water and flooded washes — never attempt to cross them.",
+      "Shut off the main water valve and electrical breakers if water is inside the home.",
+      "Document the damage and call for emergency water extraction without delay."
     ],
     "phone": "+1 (844) 833-10-48"
   }
