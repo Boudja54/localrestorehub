@@ -1,6 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import cities from "../data/cities.json";
+
+const PHONE_DISPLAY = "+1 (844) 833-10-48";
 ---
 
 <Layout title="Local Water Damage & Mold Remediation Directory | 24/7 US Response">
@@ -14,12 +16,21 @@ import cities from "../data/cities.json";
         When water damage or toxic mold strikes, every minute counts. We connect you with verified, 
         24/7 local restoration experts in your exact zip code.
       </p>
-      <a
-        href="#cities"
-        class="inline-block bg-accent hover:bg-accent-hover text-white font-bold text-lg px-10 py-4 rounded-lg shadow-lg transition transform hover:scale-105"
-      >
-        Find Your City
-      </a>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a
+          href="tel:+18448331048"
+          class="inline-block bg-accent hover:bg-accent-hover text-white font-bold text-lg px-10 py-4 rounded-lg shadow-lg transition transform hover:scale-105"
+        >
+          📞 Call {PHONE_DISPLAY}
+        </a>
+        <a
+          href="#cities"
+          class="inline-block bg-white/10 hover:bg-white/20 text-white font-bold text-lg px-10 py-4 rounded-lg shadow-lg transition border border-white/30"
+        >
+          Find Your City
+        </a>
+      </div>
+      <p class="mt-4 text-sm text-gray-200">Available 24/7 — calls are routed to verified local restoration providers.</p>
     </div>
   </section>
 
@@ -102,6 +113,12 @@ import cities from "../data/cities.json";
       <p class="text-lg text-white/90 max-w-2xl mx-auto">
         Our local dispatch operators are standing by 24/7 to connect you with verified restoration professionals in your area.
       </p>
+      <a
+        href="tel:+18448331048"
+        class="mt-8 inline-block bg-white text-accent hover:bg-gray-100 font-bold text-xl px-10 py-4 rounded-lg shadow-lg transition"
+      >
+        📞 Call {PHONE_DISPLAY} Now
+      </a>
     </div>
   </section>
 </Layout>

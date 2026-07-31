@@ -20,7 +20,7 @@ Lima is a classic Rust Belt community with much of its housing stock dating from
 
 ## The Solution: Call Your Local Dispatch
 
-> **Need immediate help in Lima? Call our 24/7 local dispatch now: 555-0198**
+> **Need immediate help in Lima? Call our 24/7 local dispatch now: [+1 (844) 833-10-48](tel:+18448331048)**
 
 *By calling this number, you consent to being connected with a third-party service provider and to the recording of your call for quality assurance and compliance purposes. Read our [Privacy Policy](/privacy-policy) for full TCPA &amp; CCPA disclosures.*
 

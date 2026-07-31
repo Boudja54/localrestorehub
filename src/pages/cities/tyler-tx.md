@@ -20,7 +20,7 @@ Tyler is located in East Texas, an area prone to severe thunderstorms, flash flo
 
 ## The Solution: Call Your Local Dispatch
 
-> **Need immediate help in Tyler? Call our 24/7 local dispatch now: 555-0198**
+> **Need immediate help in Tyler? Call our 24/7 local dispatch now: [+1 (844) 833-10-48](tel:+18448331048)**
 
 *By calling this number, you consent to being connected with a third-party service provider and to the recording of your call for quality assurance and compliance purposes. Read our [Privacy Policy](/privacy-policy) for full TCPA &amp; CCPA disclosures.*
 
