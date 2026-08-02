@@ -8,6 +8,9 @@ const { title, frontmatter, description: desc } = Astro.props;
 const pageTitle = title || frontmatter?.title || "Local Restore Hub";
 const pageDesc = desc || frontmatter?.description || "Local Restore Hub — Connecting you with verified local restoration experts 24/7";
 
+// Canonical URL: always absolute, always www.localrestorehub.com + page slug
+const canonicalURL = new URL(Astro.url.pathname, "https://www.localrestorehub.com").href;
+
 const PHONE_DISPLAY = "+1 (844) 833-10-48";
 const PHONE_TEL = "tel:+18448331048";
 ---
@@ -18,7 +21,7 @@ const PHONE_TEL = "tel:+18448331048";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={pageDesc} />
-    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    <link rel="canonical" href={canonicalURL} />
     <title>{pageTitle}</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <style>@import "../styles/global.css";</style>
