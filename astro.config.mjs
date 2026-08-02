@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://localrestorehub.com',
+  site: 'https://www.localrestorehub.com',
   output: 'static',
   integrations: [sitemap()],
   vite: {
