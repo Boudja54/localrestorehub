@@ -261,6 +261,9 @@ def main():
     print("\n--- Génération des pages ---")
     run(["python3", GEN_PATH])
 
+    # 1b. Regenerate the direct sitemap.xml (single file, no index)
+    run(["python3", os.path.join(ROOT, "scripts", "gen_sitemap.py")])
+
     # 2. Astro build
     print("--- Build Astro ---")
     out = run(["npm", "run", "build"])
