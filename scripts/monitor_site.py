@@ -124,8 +124,9 @@ def main():
         print(f"\nPages vérifiées: {checked} | Sitemap URLs: {len(urls)}")
         sys.exit(1)
     else:
-        # Silent when OK (watchdog pattern)
-        print(f"✅ LRH OK — {checked} pages, {len(urls)} sitemap URLs, redirects OK")
+        # SILENT when OK (watchdog pattern) — no notification spam.
+        # For a manual check anytime: python3 scripts/monitor_site.py
+        sys.exit(0)
 
 
 if __name__ == "__main__":
