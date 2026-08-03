@@ -6,7 +6,7 @@ export interface Props {
 
 const { title, frontmatter, description: desc } = Astro.props;
 const pageTitle = title || frontmatter?.title || "Local Restore Hub";
-const pageDesc = desc || frontmatter?.description || "Local Restore Hub — Connecting you with verified local restoration experts 24/7";
+const pageDesc = desc || frontmatter?.description || "Local Restore Hub — Connecting you with verified local restoration experts daily";
 
 // Canonical URL: always absolute, always www.localrestorehub.com + page slug
 const canonicalURL = new URL(Astro.url.pathname, "https://www.localrestorehub.com").href;
@@ -45,7 +45,7 @@ const PHONE_TEL = "tel:+18448331048";
         >
           <span aria-hidden="true">📞</span>
           <span class="hidden sm:inline">{PHONE_DISPLAY}</span>
-          <span class="sm:hidden">Call 24/7</span>
+          <span class="sm:hidden">Call Now</span>
         </a>
       </nav>
     </header>
@@ -62,7 +62,7 @@ const PHONE_TEL = "tel:+18448331048";
           <p>&copy; {new Date().getFullYear()} Local Restore Hub. All rights reserved.</p>
           <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
             <a href={PHONE_TEL} class="text-white font-semibold hover:text-gray-200 transition">
-              📞 {PHONE_DISPLAY} — 24/7 Emergency Line
+              📞 {PHONE_DISPLAY} — Emergency Line (Daily 10:00 AM - 2:00 AM)
             </a>
             <span class="hidden sm:inline text-gray-500">|</span>
             <div class="flex gap-4">
@@ -77,9 +77,10 @@ const PHONE_TEL = "tel:+18448331048";
           <p><strong>TCPA Consent Notice:</strong> By calling any telephone number displayed on this website, you expressly consent to being connected with third-party service providers and to the recording and/or monitoring of your call for quality assurance, training, and compliance purposes. You also consent to receive follow-up communications regarding your service inquiry. Consent is not a condition of purchase. <a href="/privacy-policy" class="text-gray-300 hover:text-white underline">Learn more</a>.</p>
           <p class="mt-2"><a href="/privacy-policy#ccpa-rights" class="text-gray-300 hover:text-white underline">Do Not Sell or Share My Personal Information (CCPA)</a></p>
         </div>
-        <!-- Legal Disclaimer -->
+        <!-- Legal Disclaimer (Marketcall offer #12330 — exact required text) -->
         <div class="border-t border-primary-light/30 pt-4 mt-4 text-xs text-gray-400 leading-relaxed text-center md:text-left">
-          <p>Disclaimer: Local Restore Hub is a free service that helps users connect with local home service contractors. All contractors are independent, and we do not warrant or guarantee any work performed. It is the responsibility of the user to verify that the contractor hired has the necessary licenses and insurance required for the work being performed. Any third-party products, brands, or trademarks listed above are the sole property of their respective owner. No representation or warranty is made regarding the accuracy or completeness of the information presented on this site.</p>
+          <p>Disclaimer: Local Restore Hub is a free service to assist homeowners in connecting with local service providers. All contractors/providers are independent and Local Restore Hub does not warrant or guarantee any work performed. It is the responsibility of the homeowner to verify that the hired contractor furnishes the necessary license and insurance required for the work being performed. All persons depicted in a photo or video are actors or models and not contractors listed on Local Restore Hub.</p>
+          <p class="mt-2">Same-day and 24/7 emergency services are subject to provider participation, location, technician availability, and demand. Availability is not guaranteed and may vary by market and appointment capacity.</p>
         </div>
       </div>
     </footer>

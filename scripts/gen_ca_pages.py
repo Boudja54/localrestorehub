@@ -36,11 +36,11 @@ DATA_PATH = os.path.join(ROOT, "src", "data", "cities.json")
 SEED_PATH = os.path.join(ROOT, "scripts", "cities-seed.json")
 
 # =====================================================================
-#  CONFIG — edit these two values only when the network confirms them
+#  CONFIG — edit these values only when the network confirms them
 # =====================================================================
-PHONE_DISPLAY = "+1 (844) 833-10-48"     # tracking number shown to visitors
-PHONE_TEL     = "tel:+18448331048"       # clickable phone link
-HOURS         = "24/7"                   # ← pending Marketcall confirmation
+PHONE_DISPLAY = "+1 (844) 833-10-48"          # tracking number shown to visitors
+PHONE_TEL     = "tel:+18448331048"            # clickable phone link
+HOURS         = "Daily 10:00 AM - 2:00 AM"    # Marketcall offer #12330: Mon-Sun 10am-2am EST
 # =====================================================================
 
 # Strict water keywords — rotated across cities
