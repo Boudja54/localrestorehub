@@ -82,9 +82,9 @@ def main():
         if code != 301 or "www.localrestorehub.com" not in loc:
             issues.append(f"Redirect {label}: HTTP {code} → {loc} (attendu 301 → www)")
 
-    # 7. Sitemap
+    # 7. Sitemap (direct single file since Aug 2026 — no more sitemap-0.xml)
     try:
-        sm = fetch(BASE + "/sitemap-0.xml")
+        sm = fetch(BASE + "/sitemap.xml")
         urls = re.findall(r"<loc>(.*?)</loc>", sm)
         if len(urls) < 5:
             issues.append(f"Sitemap: seulement {len(urls)} URLs")
