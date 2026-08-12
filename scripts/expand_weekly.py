@@ -221,6 +221,40 @@ def run(cmd, cwd=ROOT):
     return r.stdout
 
 
+def check_doorway_risk(threshold=0.30):
+    """Anti-doorway gate: compute normalized Jaccard similarity between all
+    city-page CONTEXT blocks (city name stripped). If ANY pair exceeds the
+    threshold, abort the push — the batch would recreate doorway pages."""
+    pages_dir = os.path.join(ROOT, "src", "pages")
+    pages = {}
+    for f in sorted(os.listdir(pages_dir)):
+        if not f.startswith("water-damage-repair-") or not f.endswith(".astro"):
+            continue
+        path = os.path.join(pages_dir, f)
+        src = open(path, encoding="utf-8").read()
+        m_city = re.search(r'const CITY = "([^"]*)"', src)
+        m_ctx = re.search(r'const CONTEXT = "([^"]*)"', src)
+        if not m_city or not m_ctx:
+            continue
+        city, text = m_city.group(1), m_ctx.group(1)
+        norm = text.lower().replace(city.lower(), " ").replace("california", " ")
+        norm = re.sub(r"[^a-z ]", " ", norm)
+        words = {w for w in norm.split() if len(w) > 3}
+        pages[city] = words
+
+    cities = list(pages.keys())
+    bad = []
+    for i in range(len(cities)):
+        for j in range(i + 1, len(cities)):
+            a, b = pages[cities[i]], pages[cities[j]]
+            inter = len(a & b)
+            union = len(a | b)
+            jac = inter / union if union else 0
+            if jac > threshold:
+                bad.append((cities[i], cities[j], round(jac, 2)))
+    return bad
+
+
 def main():
     dry_run = "--dry-run" in sys.argv
     batch, remaining = pick_batch()
@@ -261,7 +295,21 @@ def main():
     print("\n--- Génération des pages ---")
     run(["python3", GEN_PATH])
 
-    # 1b. Regenerate the direct sitemap.xml (single file, no index)
+    # 1a. Enrich new pages with verified local data (NOAA/FEMA) if available
+    print("\n--- Enrichissement données locales (NOAA/FEMA) ---")
+    run(["python3", os.path.join(ROOT, "scripts", "add_local_data.py")])
+
+    # 1b. Anti-doorway gate: abort push if any pair of pages is too similar
+    print("\n--- Check anti-doorway (similarité CONTEXT) ---")
+    bad_pairs = check_doorway_risk()
+    if bad_pairs:
+        print("❌ BLOCAGE : paires de pages trop similaires (risque doorway) :")
+        for c1, c2, jac in bad_pairs:
+            print(f"   {c1} vs {c2} -> {jac}")
+        print("Aucun commit/push effectué. Corrigez les CONTEXT puis relancez.")
+        sys.exit(2)
+
+    # 1c. Regenerate the direct sitemap.xml (single file, no index)
     run(["python3", os.path.join(ROOT, "scripts", "gen_sitemap.py")])
 
     # 2. Astro build
