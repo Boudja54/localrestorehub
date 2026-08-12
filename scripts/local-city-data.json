@@ -2,204 +2,204 @@
   "Acton": {
     "precip_in": 11.13,
     "rainy_days": 34.3,
-    "fema": "mostly Zone X (minimal flood hazard), with an AE floodway along seasonal washes",
+    "fema": "Low-Moderate - Zone X majority with an AE floodway along the main wash",
     "local_fact": "Acton sits at roughly 2,700 feet of elevation along the Sierra Highway corridor, where winter storms can drop snow above 3,000 feet.",
-    "sources": "NOAA 1991-2020 normals USC00040014 (Acton); FEMA NFHL REST MapServer/28"
+    "sources": "NOAA 1991-2020 normals USC00040014 (Acton Escondido); FEMA NFHL MapServer/28"
   },
   "Agoura Hills": {
-    "precip_in": 16.54,
+    "precip_in": 18.40,
     "rainy_days": 31.4,
-    "fema": "mostly Zone X (minimal flood hazard), with localized AE along creek corridors",
+    "fema": "Low - Zone X (area of minimal flood hazard)",
     "local_fact": "Housing stock grew mainly from the 1960s through the 1980s as the Santa Monica Mountains foothills were developed.",
-    "sources": "NOAA 1991-2020 normals USC00048904 + Lechuza (Agoura Hills); FEMA NFHL REST MapServer/28"
+    "sources": "Wikipedia climate box (Agoura Hills); NOAA normals USC00044867 Lechuza rainy-day proxy; FEMA NFHL MapServer/28"
   },
   "Bardsdale": {
     "precip_in": 17.38,
     "rainy_days": 28.9,
-    "fema": "Moderate - Zone AE along the Santa Clara River corridor, Zone X on higher ground",
+    "fema": "Low - Zone X townsite; Zone AE along the Santa Clara River corridor",
     "local_fact": "An unincorporated agricultural enclave in the Santa Clara River Valley where orchards and older farmhouses sit close to the river floodplain.",
-    "sources": "NOAA 1991-2020 normals USC00047957 (Fillmore/Moorpark area); FEMA NFHL REST MapServer/28"
+    "sources": "NOAA 1991-2020 normals USC00047957 (Santa Paula proxy); FEMA NFHL MapServer/28"
   },
   "Bell": {
-    "precip_in": 14.93,
+    "precip_in": 14.9,
     "rainy_days": 35.7,
-    "fema": "Low - Zone X (minimal flood hazard), with levee-reduced X along the Los Angeles River edge",
+    "fema": "Low - Zone X (minimal; levee-reduced X along the Los Angeles River)",
     "local_fact": "One of the most densely populated cities in LA County, with older housing stock and limited open ground.",
-    "sources": "NOAA 1991-2020 normals USW00093134 (LA Downtown/USC); FEMA NFHL REST MapServer/28"
+    "sources": "NOAA 1991-2020 normals USW00093134 (LA Downtown/USC); FEMA NFHL MapServer/28"
   },
   "Bell Gardens": {
-    "precip_in": 14.45,
-    "rainy_days": 34.9,
-    "fema": "Low - Zone X (minimal flood hazard), with levee-reduced X along the Los Angeles River edge",
+    "precip_in": 12.26,
+    "rainy_days": 35.2,
+    "fema": "Low - Zone X (area of minimal flood hazard)",
     "local_fact": "Median year house/condo built: 1957 - one of the densest cities in LA County, with older housing and limited yard drainage.",
-    "sources": "NOAA 1991-2020 normals USW00003122 (Long Beach proxy); FEMA NFHL REST MapServer/28"
+    "sources": "NOAA 1991-2020 normals USW00023129 (Long Beach Daugherty AP proxy); city-data.com; FEMA NFHL MapServer/28"
   },
   "Castaic": {
     "precip_in": 18.63,
     "rainy_days": 43.8,
-    "fema": "mostly Zone X, with AE zones near Castaic Creek and the lake shoreline",
+    "fema": "Low - shaded Zone X (0.2% annual chance)",
     "local_fact": "Homes near Castaic Lake and along the creek corridor sit on hillside terrain where winter storms concentrate runoff.",
-    "sources": "NOAA 1991-2020 normals USC00048014 (Castaic); FEMA NFHL REST MapServer/28"
+    "sources": "NOAA 1991-2020 normals USC00048014 (Saugus proxy); FEMA NFHL MapServer/28"
   },
   "Commerce": {
     "precip_in": 15.32,
     "rainy_days": 24.4,
-    "fema": "Low - Zone X (minimal flood hazard), with levee-reduced X along the Los Angeles River edge",
+    "fema": "Low - Zone X (area of minimal flood hazard)",
     "local_fact": "A fully built-out industrial city where aging plumbing and flat, paved terrain meet.",
-    "sources": "NOAA 1991-2020 normals USC00045790 (Commerce); FEMA NFHL REST MapServer/28"
+    "sources": "NOAA 1991-2020 normals USC00045790 (Montebello proxy); FEMA NFHL MapServer/28"
   },
   "Compton": {
     "precip_in": 13.96,
-    "rainy_days": 33.0,
-    "fema": "Low - Zone X (minimal flood hazard), with 0.2% annual chance zones along Compton Creek",
+    "rainy_days": 35.2,
+    "fema": "Moderate - shaded Zone X (0.2% annual chance) along Compton Creek",
     "local_fact": "A flat, fully urbanized city in the southern LA basin where storm drains and creek channels handle most runoff.",
-    "sources": "Wikipedia climate box (Compton); FEMA NFHL REST MapServer/28"
+    "sources": "Wikipedia climate box (Compton 13.96 in/yr); NOAA normals USW00023129; FEMA NFHL MapServer/28"
   },
   "Downey": {
-    "precip_in": 12.82,
+    "precip_in": 14.9,
     "rainy_days": 35.7,
-    "fema": "Low - Zone X (minimal flood hazard), with levee-reduced X along the San Gabriel River",
+    "fema": "Low - Zone X (minimal; levee-reduced X along the San Gabriel River)",
     "local_fact": "Downey's mostly clay soils hold water, which can mean slow-draining yards and higher flood risk around older slab foundations.",
-    "sources": "NOAA 1991-2020 normals USW00023174 (Torrance proxy); FEMA NFHL REST MapServer/28"
+    "sources": "NOAA 1991-2020 normals USW00093134 (LA Downtown/USC); FEMA NFHL MapServer/28"
   },
   "El Segundo": {
-    "precip_in": 12.26,
-    "rainy_days": 35.2,
-    "fema": "Low - Zone X (minimal flood hazard)",
+    "precip_in": 12.82,
+    "rainy_days": 35.7,
+    "fema": "Low - Zone X (area of minimal flood hazard)",
     "local_fact": "A coastal city wedged between the Pacific and LAX, where salt air attacks metal plumbing and water heaters.",
-    "sources": "NOAA 1991-2020 normals USW00023129 (LAX); FEMA NFHL REST MapServer/28"
+    "sources": "NOAA 1991-2020 normals USW00023174 (LAX); FEMA NFHL MapServer/28"
   },
   "Elizabeth Lake": {
     "precip_in": 16.76,
     "rainy_days": 39.6,
-    "fema": "Moderate - Zone AE around the lakebed and along streams feeding the high desert basin",
+    "fema": "Low - Zone X (area of minimal flood hazard), with seasonal lakebed flood risk",
     "local_fact": "A remote high desert community where the seasonal lakebed expands dramatically in wet years, putting low-lying homes at risk.",
-    "sources": "NOAA 1991-2020 normals USC00042941 (Elizabeth Lake); FEMA NFHL REST MapServer/28"
+    "sources": "NOAA 1991-2020 normals USC00042941 (Fairmont proxy); FEMA NFHL MapServer/28"
   },
   "Fillmore": {
-    "precip_in": 18.63,
-    "rainy_days": 31.9,
-    "fema": "Moderate - Zone AE along the Santa Clara River corridor through the valley floor",
-    "local_fact": "Median year house/condo built: 1963 - a historic agricultural town with older housing along the river plain.",
-    "sources": "NOAA 1991-2020 normals USC00046940 (Fillmore); FEMA NFHL REST MapServer/28"
+    "precip_in": 17.38,
+    "rainy_days": 28.9,
+    "fema": "Moderate - Zone AE along the Santa Clara River corridor (city center Zone X)",
+    "local_fact": "A historic agricultural town on the Santa Clara River plain, where orchards and older housing sit close to the floodplain.",
+    "sources": "NOAA 1991-2020 normals USC00047957 (Santa Paula proxy); Wikipedia; FEMA NFHL MapServer/28"
   },
   "Gardena": {
-    "precip_in": 12.69,
-    "rainy_days": 29.8,
-    "fema": "Low - Zone X (minimal flood hazard), with localized 0.2% zones near the Dominguez Channel",
+    "precip_in": 12.26,
+    "rainy_days": 35.2,
+    "fema": "Low - Zone X (area of minimal flood hazard)",
     "local_fact": "Built on former agricultural land, Gardena's flat terrain and older mid-century homes face slow-draining yards in wet years.",
-    "sources": "NOAA 1991-2020 normals USC00047953 (Santa Monica proxy); FEMA NFHL REST MapServer/28"
+    "sources": "NOAA 1991-2020 normals USW00023129 (Long Beach Airport); FEMA NFHL MapServer/28"
   },
   "Hawthorne": {
-    "precip_in": 13.76,
-    "rainy_days": 35.1,
-    "fema": "Low - Zone X (minimal flood hazard)",
+    "precip_in": 12.82,
+    "rainy_days": 35.7,
+    "fema": "Low - Zone X (area of minimal flood hazard)",
     "local_fact": "A flat, densely built South Bay city whose housing was largely constructed in the 1940s-1960s.",
-    "sources": "NOAA 1991-2020 normals (Redondo Beach proxy); FEMA NFHL REST MapServer/28"
+    "sources": "NOAA 1991-2020 normals USW00023174 (LAX); FEMA NFHL MapServer/28"
   },
   "Hermosa Beach": {
-    "precip_in": 14.0,
-    "rainy_days": null,
-    "fema": "Low - Zone X citywide, with VE zones along the shoreline",
+    "precip_in": 14.45,
+    "rainy_days": 34.9,
+    "fema": "Low - Zone X (minimal; beach bluff and strand)",
     "local_fact": "Median year house/condo built: 1972 - one of the oldest housing stocks in the South Bay, on narrow sandy lots.",
-    "sources": "Wikipedia (Hermosa Beach about 14 in/yr); FEMA NFHL REST MapServer/28"
+    "sources": "NOAA 1991-2020 normals USW00003122 (Torrance AP proxy); city-data.com; Wikipedia (about 14 in/yr)"
   },
   "Juniper Hills": {
-    "precip_in": 7.4,
-    "rainy_days": 27.1,
-    "fema": "mostly Zone X (minimal flood hazard), with localized A/AE along Big Rock Creek tributaries",
+    "precip_in": null,
+    "rainy_days": null,
+    "fema": "Low - Zone X (area of minimal flood hazard)",
     "local_fact": "Homes are spread across steep chaparral lots below the San Gabriel crest, where winter storms drive runoff off the mountains.",
-    "sources": "NOAA 1991-2020 normals USC00046624 (Palmdale proxy); FEMA NFHL REST MapServer/28"
+    "sources": "FEMA NFHL MapServer/28; Wikipedia (no climate box available)"
   },
   "Lawndale": {
     "precip_in": 12.82,
     "rainy_days": 35.7,
-    "fema": "Low - Zone X (minimal flood hazard)",
+    "fema": "Low - Zone X (area of minimal flood hazard)",
     "local_fact": "Median year house/condo built: 1963 - a fully built-out South Bay city dominated by mid-century single-family homes.",
-    "sources": "NOAA 1991-2020 normals USW00023174 (Torrance proxy); FEMA NFHL REST MapServer/28"
+    "sources": "NOAA 1991-2020 normals USW00023174 (LAX proxy); city-data.com; FEMA NFHL MapServer/28"
   },
   "Littlerock": {
     "precip_in": 6.73,
     "rainy_days": 20.5,
-    "fema": "Low - Zone X (minimal flood hazard) for most of town, with A zones along Littlerock Creek",
+    "fema": "Low - shaded Zone X (0.2% annual chance)",
     "local_fact": "One of the driest cities on this site - high desert terrain where a single intense storm can overwhelm dry washes.",
-    "sources": "NOAA 1991-2020 normals USC00046773 (Littlerock); FEMA NFHL REST MapServer/28"
+    "sources": "NOAA 1991-2020 normals USC00046773 (Pearblossom proxy); FEMA NFHL MapServer/28"
   },
   "Lynwood": {
-    "precip_in": 14.93,
-    "rainy_days": 35.7,
-    "fema": "Low - Zone X (minimal flood hazard), with 0.2% annual chance zones near Compton Creek",
+    "precip_in": 12.26,
+    "rainy_days": 35.2,
+    "fema": "Low - Zone X (area of minimal flood hazard)",
     "local_fact": "A flat, fully urbanized city where heavy winter rain can overwhelm aging street drainage.",
-    "sources": "NOAA 1991-2020 normals USW00093134 (LA Downtown/USC); FEMA NFHL REST MapServer/28"
+    "sources": "NOAA 1991-2020 normals USW00023129 (Long Beach Airport); FEMA NFHL MapServer/28"
   },
   "Malibu": {
     "precip_in": 12.69,
     "rainy_days": 29.8,
-    "fema": "Moderate - VE zones along the beach and AE zones at lagoon mouths and creek crossings",
+    "fema": "High - coastal Zone VE on the beachfront and AE at lagoon mouths; Zone X inland",
     "local_fact": "Median year house/condo built: 1980 - a 21-mile coastal corridor where canyons funnel runoff and the ocean drives storm surge.",
-    "sources": "NOAA 1991-2020 normals USC00047953 (Santa Monica proxy); FEMA NFHL REST MapServer/28"
+    "sources": "NOAA 1991-2020 normals USC00047953 (Santa Monica Pier proxy); city-data.com; FEMA NFHL MapServer/28"
   },
   "Manhattan Beach": {
-    "precip_in": 13.76,
-    "rainy_days": 35.1,
-    "fema": "Low - Zone X citywide, with VE shoreline zones along the beachfront",
+    "precip_in": 12.82,
+    "rainy_days": 35.7,
+    "fema": "Low - Zone X citywide, with Zone VE at the shoreline and strand",
     "local_fact": "Median year house/condo built: 1976 - an upscale coastal city with hillside homes above the strand.",
-    "sources": "NOAA 1991-2020 normals (Redondo Beach proxy); FEMA NFHL REST MapServer/28"
+    "sources": "NOAA 1991-2020 normals USW00023174 (LAX proxy); city-data.com; FEMA NFHL MapServer/28"
   },
   "Maywood": {
     "precip_in": 14.9,
     "rainy_days": 35.7,
     "fema": "Low - Zone X (minimal; levee-reduced X along the Los Angeles River)",
     "local_fact": "Home areas along the Los Angeles River's east edge are FEMA Zone X with reduced flood risk due to levees.",
-    "sources": "NOAA 1991-2020 normals USW00093134 (LA Downtown/USC); FEMA NFHL REST MapServer/28"
+    "sources": "NOAA 1991-2020 normals USW00093134 (LA Downtown/USC); FEMA NFHL MapServer/28"
   },
   "Moorpark": {
-    "precip_in": 15.33,
-    "rainy_days": 37.9,
-    "fema": "mostly Zone X (minimal flood hazard), with localized AE near Arroyo Simi",
+    "precip_in": 17.40,
+    "rainy_days": null,
+    "fema": "Low - shaded Zone X (0.2% annual chance)",
     "local_fact": "A fast-growing city where much of the housing stock dates from the 1980s and 1990s, with newer hillside construction.",
-    "sources": "NOAA 1991-2020 normals USC00046572 (Moorpark); FEMA NFHL REST MapServer/28"
+    "sources": "Wikipedia climate box (Moorpark 17.40 in/yr); FEMA NFHL MapServer/28"
   },
   "Piru": {
-    "precip_in": 17.38,
-    "rainy_days": 28.9,
+    "precip_in": 18.63,
+    "rainy_days": 31.9,
     "fema": "Moderate - Zone AE along the Piru Creek corridor, Zone X in the town core",
     "local_fact": "Median year house/condo built: 2003 - a small valley community where the creek corridor shapes the floodplain.",
-    "sources": "NOAA 1991-2020 normals USC00047957 (Fillmore/Moorpark area); FEMA NFHL REST MapServer/28"
+    "sources": "NOAA 1991-2020 normals USC00046940 (Piru 2 ESE exact); city-data.com; FEMA NFHL MapServer/28"
   },
   "Redondo Beach": {
     "precip_in": 13.76,
     "rainy_days": 35.1,
-    "fema": "Low - Zone X citywide, with VE zones at King Harbor and along the bluff coast",
+    "fema": "Low inland (Zone X); High coastal Zone VE at the King Harbor shoreline",
     "local_fact": "Homes on the coastal flatlands sit on sandy soils with limited drainage, while hillside neighborhoods face runoff.",
-    "sources": "NOAA 1991-2020 normals (Redondo Beach); FEMA NFHL REST MapServer/28"
+    "sources": "Wikipedia climate box (Redondo Beach, NOAA-cited); FEMA NFHL MapServer/28"
   },
   "Santa Paula": {
-    "precip_in": 15.89,
-    "rainy_days": 34.8,
-    "fema": "Moderate - Zone AE along the Santa Clara River, Zone X (0.2% annual chance) in parts of town",
+    "precip_in": 17.38,
+    "rainy_days": 28.9,
+    "fema": "Moderate - Zone AE on the Santa Clara River floodplain, Zone X elsewhere",
     "local_fact": "Median year house/condo built: 1969 - an older orchard town where the river and its tributaries cross the city.",
-    "sources": "NOAA 1991-2020 normals USC00046569 (Santa Paula); FEMA NFHL REST MapServer/28"
+    "sources": "NOAA 1991-2020 normals USC00047957 (Santa Paula exact); city-data.com; FEMA NFHL MapServer/28"
   },
   "Somis": {
-    "precip_in": 15.22,
-    "rainy_days": 29.1,
-    "fema": "Low - Zone X (minimal flood hazard) across most of the valley",
+    "precip_in": 15.89,
+    "rainy_days": 34.8,
+    "fema": "Low - Zone X (area of minimal flood hazard)",
     "local_fact": "A rural agricultural community in the Las Posas Valley where heavy winter rain produces muddy runoff across open farmland.",
-    "sources": "NOAA 1991-2020 normals (Oxnard proxy); FEMA NFHL REST MapServer/28"
+    "sources": "NOAA 1991-2020 normals USC00046569 (Oxnard WFO proxy); Wikipedia; FEMA NFHL MapServer/28"
   },
   "Valyermo": {
     "precip_in": 10.0,
-    "rainy_days": null,
-    "fema": "Moderate - Zone A along Big Rock Creek below the San Gabriel Mountains",
-    "local_fact": "A remote high desert community where Big Rock Creek can run fast and wide after snowmelt or heavy storms.",
-    "sources": "Weather Spark/Wikipedia (Valyermo ~10 in/yr); FEMA NFHL REST MapServer/28"
+    "rainy_days": 27.1,
+    "fema": "High - Zone A in central Valyermo (Big Rock Creek floodplain)",
+    "local_fact": "A remote high desert community at about 4,000 feet on Big Rock Creek, which can run fast and wide after snowmelt or heavy storms.",
+    "sources": "Wikipedia (Valyermo ~10 in/yr); NOAA normals USC00046624 Palmdale rainy-day proxy; FEMA NFHL MapServer/28"
   },
   "Vernon": {
-    "precip_in": 14.45,
-    "rainy_days": 34.9,
-    "fema": "Low - Zone X (minimal flood hazard), with levee-reduced X along the Los Angeles River edge",
+    "precip_in": 12.82,
+    "rainy_days": 35.7,
+    "fema": "Low - Zone X (channelized Los Angeles River corridor)",
     "local_fact": "Median year house/condo built: 1953 - a small industrial city of warehouses and older buildings on flat former river bottom.",
-    "sources": "NOAA 1991-2020 normals USW00003122 (Long Beach proxy); FEMA NFHL REST MapServer/28"
+    "sources": "NOAA 1991-2020 normals USW00023174 (LAX proxy); city-data.com; FEMA NFHL MapServer/28"
   }
 }
