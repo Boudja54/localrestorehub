@@ -80,8 +80,8 @@ const CONTEXT = __CONTEXT__;
 const STEPS = __STEPS__;
 const NEARBY = __NEARBY__;
 
-const TITLE = `${KEYWORD} ${CITY}, CA ${ZIP} - 24/7 Emergency Response`;
-const DESC = `Need ${KEYWORD.toLowerCase()} in ${CITY}, CA ${ZIP}? Call our ${HOURS} local dispatch at ${PHONE_DISPLAY} for immediate professional help.`;
+const TITLE = `${KEYWORD} ${CITY}, CA ${ZIP} - 24/7 Emergency Restoration Services`;
+const DESC = `Need ${KEYWORD.toLowerCase()} in ${CITY}, CA ${ZIP}? Call our ${HOURS} local dispatch at ${PHONE_DISPLAY} for immediate professional restoration services and emergency response.`;
 ---
 
 <Layout title={TITLE} description={DESC}>

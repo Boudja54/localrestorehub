@@ -106,7 +106,20 @@ def process_page(path: Path, city_key: str, data: dict):
     def norm(s: str) -> str:
         return re.sub(r"[^a-z0-9]+", "", s.lower())[:60]
 
+    ctx_lower = ctx.lower()
     ctx_core = norm(ctx)
+
+    # Semantic idempotency: if the CONTEXT already carries the verified data
+    # (e.g. the seed CONTEXT already embeds NOAA/FEMA facts), skip the matching
+    # template facts so we never duplicate content or inflate Jaccard similarity
+    # between city pages (anti-doorway gate depends on it).
+    if "inches" in ctx_lower:
+        sentences = [s for s in sentences if "inches" not in s]
+        print(f"    ~ {path.name}: precip data already in CONTEXT, skipping")
+    if "fema" in ctx_lower or "flood risk" in ctx_lower:
+        sentences = [s for s in sentences if "fema" not in s.lower() and "flood risk" not in s.lower()]
+        print(f"    ~ {path.name}: FEMA data already in CONTEXT, skipping")
+
     kept = []
     for s in sentences:
         core = norm(s)
