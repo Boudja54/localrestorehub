@@ -163,6 +163,11 @@ def pick_batch():
     with open(SEED_PATH, encoding="utf-8") as f:
         seed = json.load(f)
     deployed_zips = {c["zip"] for c in seed}
+    # A city often spans several ZIPs while the seed stores only ONE zip per city,
+    # so filtering on ZIP alone is not enough: the lowest remaining ZIPs can all belong
+    # to cities that are already live (that bug made every weekly run add 0 cities).
+    # Skip by page slug (= city name) too.
+    deployed_slugs = {make_slug(c["city"]) for c in seed if c.get("city")}
 
     with open(ZIPS_PATH, encoding="utf-8") as f:
         zips = json.load(f)
@@ -171,11 +176,14 @@ def pick_batch():
     seen_cities = set()
     for z in sorted(zips):
         city = zips[z]
+        if not city.strip():
+            continue
         if z in deployed_zips:
             continue
         if city.lower() in EXCLUDED_CITIES:
             continue
-        if not city.strip():
+        # already live under another ZIP -> skip by city slug
+        if make_slug(city) in deployed_slugs:
             continue
         # dedupe by city name — first (lowest) zip wins
         key = city.lower()
@@ -280,7 +288,7 @@ def main():
         print(f"➕ {city} ({zipcode})")
 
     if added == 0:
-        print("✅ Aucune ville ajoutée (déjà toutes présentes).")
+        print(f"⚠️  Aucune ville ajoutée sur {len(batch)} sélectionnées (slugs déjà présents) — rien à pousser.")
         return
 
     with open(SEED_PATH, "w", encoding="utf-8") as f:
