@@ -274,39 +274,6 @@ def clean_stale_pages(current_slugs):
     return removed
 
 
-NEARBY_HEADING = '<h2 class="text-2xl md:text-3xl font-bold text-primary mb-6">Nearby Service Areas</h2>'
-CTA_MARK = "CCPA disclosures.</p>"
-
-
-def preserve_extra(old_page, new_page):
-    """Carry over hand-written sections that the template does NOT generate.
-
-    Blocks between the mid-page CTA box and the "Nearby Service Areas" heading
-    (24h emergency copy, local FAQ from the GSC boost rounds) would otherwise be
-    deleted every time a page is regenerated — that regression happened on
-    2026-08-24 and had to be restored by hand.
-    """
-    def split(page):
-        mark = page.find(CTA_MARK)
-        anchor_pos = page.find(NEARBY_HEADING)
-        if mark == -1 or anchor_pos == -1 or anchor_pos < mark:
-            return None
-        close = page.find("</div>", mark)
-        if close == -1 or close > anchor_pos:
-            return None
-        cut = close + len("</div>")
-        return page[:cut], page[cut:anchor_pos], page[anchor_pos:]
-
-    old, new = split(old_page), split(new_page)
-    if not old or not new:
-        return new_page
-    extra = old[1]
-    if not extra.strip():
-        return new_page
-    print("   preserved hand-written block (24h/FAQ) on existing page")
-    return new[0] + extra + new[2]
-
-
 def build_page(city, all_cities):
     """Render the Astro page template for one city."""
     others = [x for x in all_cities if x["url_slug"] != city["url_slug"]]
@@ -375,11 +342,8 @@ def main():
     generated = []
     for c in cities:
         fpath = os.path.join(PAGES_DIR, f"{c['url_slug']}.astro")
-        page = build_page(c, cities)
-        if os.path.exists(fpath):
-            page = preserve_extra(open(fpath, encoding="utf-8").read(), page)
         with open(fpath, "w", encoding="utf-8") as f:
-            f.write(page)
+            f.write(build_page(c, cities))
         generated.append(c["url_slug"])
         print(f"✅ {c['url_slug']}.astro")
 

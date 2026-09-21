@@ -120,31 +120,6 @@ REGION_CONTEXTS = {
             "the Antelope Valley high desert, where sudden monsoon storms and winter cloudbursts can drop heavy rain on dry ground, causing flash flooding and water emergencies."),
 }
 
-# Fallback used when a ZIP prefix has no dedicated regional context.
-DEFAULT_CONTEXT = ("California's seasonal storms and aging home plumbing create real "
-                   "water damage risks for homeowners across the region.")
-
-
-def region_template(prefix):
-    """Regional CONTEXT template for a ZIP prefix (generic CA fallback)."""
-    return REGION_CONTEXTS.get(prefix, ("Los Angeles County", "California", DEFAULT_CONTEXT))[2]
-
-
-def live_context_templates(seed):
-    """Regional templates already carried by a live page.
-
-    Two pages with the exact same template text are doorway duplicates, so any
-    candidate whose prefix template is already live is skipped (this is what
-    blocked the all-906xx Gateway Cities batch on 2026-09-21).
-    """
-    live = set()
-    for c in seed:
-        ctx = c.get("context") or ""
-        for _, _, tpl in REGION_CONTEXTS.values():
-            if ctx.endswith(tpl):
-                live.add(tpl)
-    return live
-
 # Opening sentences rotated per city for local flavor
 INTRO_TEMPLATES = [
     "Water damage in {city} can strike without warning — a burst pipe, a failing water heater, or a storm that overwhelms the drainage. Fast, professional help protects your home and your family.",
@@ -188,11 +163,6 @@ def pick_batch():
     with open(SEED_PATH, encoding="utf-8") as f:
         seed = json.load(f)
     deployed_zips = {c["zip"] for c in seed}
-    # A city often spans several ZIPs while the seed stores only ONE zip per city,
-    # so filtering on ZIP alone is not enough: the lowest remaining ZIPs can all belong
-    # to cities that are already live (that bug made every weekly run add 0 cities).
-    # Skip by page slug (= city name) too.
-    deployed_slugs = {make_slug(c["city"]) for c in seed if c.get("city")}
 
     with open(ZIPS_PATH, encoding="utf-8") as f:
         zips = json.load(f)
@@ -201,14 +171,11 @@ def pick_batch():
     seen_cities = set()
     for z in sorted(zips):
         city = zips[z]
-        if not city.strip():
-            continue
         if z in deployed_zips:
             continue
         if city.lower() in EXCLUDED_CITIES:
             continue
-        # already live under another ZIP -> skip by city slug
-        if make_slug(city) in deployed_slugs:
+        if not city.strip():
             continue
         # dedupe by city name — first (lowest) zip wins
         key = city.lower()
@@ -217,22 +184,7 @@ def pick_batch():
         seen_cities.add(key)
         candidates.append((z, city))
 
-    # Geographic spread: one city per ZIP prefix per batch. The regional CONTEXT
-    # template is keyed by ZIP prefix, so two same-prefix cities in one batch would
-    # produce near-identical pages and trip the anti-doorway gate.
-    live_templates = live_context_templates(seed)
-    batch, used_prefixes = [], set()
-    for z, city in candidates:
-        if z[:3] in used_prefixes:
-            continue
-        if region_template(z[:3]) in live_templates:
-            continue
-        used_prefixes.add(z[:3])
-        batch.append((z, city))
-        if len(batch) == BATCH_SIZE:
-            break
-    if len(batch) < BATCH_SIZE:
-        print(f"\u2139\ufe0f  Pool restreint : {len(batch)}/{BATCH_SIZE} villes sur des prefixes ZIP inedits")
+    batch = candidates[:BATCH_SIZE]
     return batch, len(candidates)
 
 
@@ -240,7 +192,8 @@ def build_city_entry(zipcode, city):
     """Generate a full seed entry for one city with local, compliant content."""
     prefix = zipcode[:3]
     county, region, context = REGION_CONTEXTS.get(
-        prefix, ("Los Angeles County", "California", DEFAULT_CONTEXT))
+        prefix, ("Los Angeles County", "California",
+                 "California's seasonal storms and aging home plumbing create real water damage risks for homeowners across the region."))
 
     intro_tpl = INTRO_TEMPLATES[int(zipcode) % len(INTRO_TEMPLATES)]
     steps = STEPS_POOL[int(zipcode) % len(STEPS_POOL)]
@@ -327,7 +280,7 @@ def main():
         print(f"➕ {city} ({zipcode})")
 
     if added == 0:
-        print(f"⚠️  Aucune ville ajoutée sur {len(batch)} sélectionnées (slugs déjà présents) — rien à pousser.")
+        print("✅ Aucune ville ajoutée (déjà toutes présentes).")
         return
 
     with open(SEED_PATH, "w", encoding="utf-8") as f:
@@ -337,13 +290,6 @@ def main():
     if dry_run:
         print(f"\n🔍 Dry-run: {added} villes prêtes (seed mis à jour, pas de build/push).")
         return
-
-    # 0b. Protect hand-crafted CONTEXT/INTRO: copy them from the committed pages
-    #     back into the seed, and inject NEW_CONTEXTS for freshly added cities.
-    #     The generator rebuilds every page from the seed, so without this sync it
-    #     reverts the anti-doorway rewrites and reintroduces duplicate CONTEXTs.
-    print("\n--- Sync seed (contextes retravailles + NEW_CONTEXTS) ---")
-    print(run(["python3", os.path.join(ROOT, "scripts", "sync_seed_from_pages.py")]).strip())
 
     # 1. Generate pages + cities.json
     print("\n--- Génération des pages ---")
