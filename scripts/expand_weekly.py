@@ -63,6 +63,9 @@ EXCLUDED_CITIES = [
     "east rancho dominguez", "la crescenta", "montrose", "sunland",
     "tujunga", "avalon", "harbor city", "signal hill", "lomita",
     "city of industry", "la puente", "hacienda heights",
+    # OCR noise in the official zip list: 93011 is a PO-box ZIP (Lamplighter
+    # Mobile Home Park, Camarillo) and would render as a junk city page.
+    "lamplighter mob", "lamplighter mobile home park",
 ]
 
 # Keywords rotated across new cities (must stay strictly water-related)
@@ -302,6 +305,16 @@ def check_doorway_risk(threshold=0.30):
     return bad
 
 
+def batch_blame(bad_pairs, batch):
+    """Cities of the current batch implicated in the offending pairs.
+
+    A blocked run is almost always caused by a batch city that had no hand-crafted
+    CONTEXT and fell back on a shared regional template; those are the entries to
+    rewrite in NEW_CONTEXTS (scripts/sync_seed_from_pages.py)."""
+    batch_cities = {city for _, city in batch}
+    return sorted({c for pair in bad_pairs for c in pair[:2]} & batch_cities)
+
+
 def main():
     dry_run = "--dry-run" in sys.argv
     batch, remaining = pick_batch()
@@ -360,6 +373,14 @@ def main():
         print("❌ BLOCAGE : paires de pages trop similaires (risque doorway) :")
         for c1, c2, jac in bad_pairs:
             print(f"   {c1} vs {c2} -> {jac}")
+        blame = batch_blame(bad_pairs, batch)
+        if blame:
+            print("\nVilles de ce lot sans CONTEXT sur mesure (a corriger en priorite) :")
+            for c in blame:
+                print(f"   - {c}")
+            print("Ajoutez un CONTEXT/INTRO unique pour chacune dans NEW_CONTEXTS")
+            print("(scripts/sync_seed_from_pages.py), puis relancez la commande :")
+            print("   python3 scripts/sync_seed_from_pages.py && python3 scripts/gen_ca_pages.py")
         print("Aucun commit/push effectué. Corrigez les CONTEXT puis relancez.")
         sys.exit(2)
 
