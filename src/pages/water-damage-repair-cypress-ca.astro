@@ -1,0 +1,106 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const PHONE_DISPLAY = "+1 (844) 833-10-48";
+const PHONE_TEL = "tel:+18448331048";
+const HOURS = "Daily 10:00 AM - 2:00 AM";
+
+const CITY = "Cypress";
+const ZIP = "90630";
+const COUNTY = "Orange County";
+const KEYWORD = "Water Damage Restoration";
+const INTRO = "Cypress filled in over a short stretch of post-war years, so the pipework in one house is usually the same age as the pipework next door — and it tends to let go on the same schedule. A nearby crew can begin extraction the same day.";
+const CONTEXT = "Cypress lies in northwestern Orange County on level ground between the San Gabriel River channel and Coyote Creek, a stretch of former dairy and bean fields that was still largely agricultural into the 1950s. The city then built out quickly in one continuous wave: compact single-story tracts, small apartment courts, and the commercial frontage along Lincoln Avenue and Valley View Street, with the college campus and the Los Alamitos base holding the largest open parcels. Practically every neighborhood was graded and drained at the same time, and the terrain is flat enough that escaped water and stormwater share the same street system, which is why a break beneath a slab or a blocked lateral often announces itself first as soft pavement, a waterlogged planter bed, or a meter that keeps turning when nothing is running.";
+const STEPS = ["Shut off the main water supply immediately if the source is a burst pipe or plumbing failure.", "Document all damage with photos and notes for your insurance claim before any cleanup begins.", "Move valuable items, electronics, and important documents to a dry, safe area if it is safe to do so."];
+const NEARBY = [{"slug": "water-damage-repair-bardsdale-ca", "city": "Bardsdale"}, {"slug": "water-damage-repair-somis-ca", "city": "Somis"}, {"slug": "water-damage-repair-piru-ca", "city": "Piru"}, {"slug": "water-damage-repair-littlerock-ca", "city": "Littlerock"}, {"slug": "water-damage-repair-acton-ca", "city": "Acton"}, {"slug": "water-damage-repair-valyermo-ca", "city": "Valyermo"}, {"slug": "water-damage-repair-fillmore-ca", "city": "Fillmore"}, {"slug": "water-damage-repair-santa-paula-ca", "city": "Santa Paula"}, {"slug": "water-damage-repair-castaic-ca", "city": "Castaic"}, {"slug": "water-damage-repair-moorpark-ca", "city": "Moorpark"}, {"slug": "water-damage-repair-agoura-hills-ca", "city": "Agoura Hills"}, {"slug": "water-damage-repair-elizabeth-lake-ca", "city": "Elizabeth Lake"}, {"slug": "water-damage-repair-juniper-hills-ca", "city": "Juniper Hills"}, {"slug": "water-damage-repair-commerce-ca", "city": "Commerce"}, {"slug": "water-damage-repair-vernon-ca", "city": "Vernon"}, {"slug": "water-damage-repair-bell-gardens-ca", "city": "Bell Gardens"}, {"slug": "water-damage-repair-bell-ca", "city": "Bell"}, {"slug": "water-damage-repair-compton-ca", "city": "Compton"}, {"slug": "water-damage-repair-downey-ca", "city": "Downey"}, {"slug": "water-damage-repair-el-segundo-ca", "city": "El Segundo"}, {"slug": "water-damage-repair-gardena-ca", "city": "Gardena"}, {"slug": "water-damage-repair-hawthorne-ca", "city": "Hawthorne"}, {"slug": "water-damage-repair-hermosa-beach-ca", "city": "Hermosa Beach"}, {"slug": "water-damage-repair-lawndale-ca", "city": "Lawndale"}, {"slug": "water-damage-repair-lynwood-ca", "city": "Lynwood"}, {"slug": "water-damage-repair-malibu-ca", "city": "Malibu"}, {"slug": "water-damage-repair-manhattan-beach-ca", "city": "Manhattan Beach"}, {"slug": "water-damage-repair-maywood-ca", "city": "Maywood"}, {"slug": "water-damage-repair-redondo-beach-ca", "city": "Redondo Beach"}, {"slug": "water-damage-repair-south-gate-ca", "city": "South Gate"}, {"slug": "water-damage-repair-inglewood-ca", "city": "Inglewood"}, {"slug": "water-damage-repair-torrance-ca", "city": "Torrance"}, {"slug": "water-damage-repair-whittier-ca", "city": "Whittier"}, {"slug": "water-damage-repair-artesia-ca", "city": "Artesia"}, {"slug": "water-damage-repair-altadena-ca", "city": "Altadena"}, {"slug": "water-damage-repair-san-marino-ca", "city": "San Marino"}, {"slug": "water-damage-repair-newhall-ca", "city": "Newhall"}, {"slug": "water-damage-repair-toluca-lake-ca", "city": "Toluca Lake"}, {"slug": "water-damage-repair-alta-loma-ca", "city": "Alta Loma"}, {"slug": "water-damage-repair-alhambra-ca", "city": "Alhambra"}, {"slug": "water-damage-repair-costa-mesa-ca", "city": "Costa Mesa"}, {"slug": "water-damage-repair-santa-ana-ca", "city": "Santa Ana"}, {"slug": "water-damage-repair-buena-park-ca", "city": "Buena Park"}, {"slug": "water-damage-repair-bellflower-ca", "city": "Bellflower"}, {"slug": "water-damage-repair-arcadia-ca", "city": "Arcadia"}, {"slug": "water-damage-repair-santa-clarita-ca", "city": "Santa Clarita"}, {"slug": "water-damage-repair-azusa-ca", "city": "Azusa"}, {"slug": "water-damage-repair-huntington-beach-ca", "city": "Huntington Beach"}, {"slug": "water-damage-repair-cowan-heights-ca", "city": "Cowan Heights"}, {"slug": "water-damage-repair-brea-ca", "city": "Brea"}, {"slug": "water-damage-repair-camarillo-ca", "city": "Camarillo"}, {"slug": "water-damage-repair-lancaster-ca", "city": "Lancaster"}, {"slug": "water-damage-repair-cerritos-ca", "city": "Cerritos"}, {"slug": "water-damage-repair-lakewood-ca", "city": "Lakewood"}, {"slug": "water-damage-repair-duarte-ca", "city": "Duarte"}, {"slug": "water-damage-repair-northridge-ca", "city": "Northridge"}, {"slug": "water-damage-repair-irwindale-ca", "city": "Irwindale"}, {"slug": "water-damage-repair-midway-city-ca", "city": "Midway City"}, {"slug": "water-damage-repair-santa-ana-heights-ca", "city": "Santa Ana Heights"}, {"slug": "water-damage-repair-fullerton-ca", "city": "Fullerton"}, {"slug": "water-damage-repair-oxnard-ca", "city": "Oxnard"}, {"slug": "water-damage-repair-palmdale-ca", "city": "Palmdale"}, {"slug": "water-damage-repair-paramount-ca", "city": "Paramount"}, {"slug": "water-damage-repair-monrovia-ca", "city": "Monrovia"}, {"slug": "water-damage-repair-porter-ranch-ca", "city": "Porter Ranch"}, {"slug": "water-damage-repair-chino-ca", "city": "Chino"}, {"slug": "water-damage-repair-newport-coast-ca", "city": "Newport Coast"}, {"slug": "water-damage-repair-fountain-valley-ca", "city": "Fountain Valley"}, {"slug": "water-damage-repair-garden-grove-ca", "city": "Garden Grove"}, {"slug": "water-damage-repair-simi-valley-ca", "city": "Simi Valley"}];
+
+const TITLE = `${KEYWORD} ${CITY}, CA ${ZIP} - 24/7 Emergency Restoration Services`;
+const DESC = `Need ${KEYWORD.toLowerCase()} in ${CITY}, CA ${ZIP}? Call our ${HOURS} local dispatch at ${PHONE_DISPLAY} for immediate professional restoration services and emergency response.`;
+---
+
+<Layout title={TITLE} description={DESC}>
+  <!-- ============ HERO LOCAL ============ -->
+  <section class="bg-gradient-to-br from-primary via-primary-light to-primary text-white">
+    <div class="max-w-5xl mx-auto px-4 py-16 md:py-24 text-center">
+      <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mb-4">
+        {KEYWORD} in {CITY}, CA {ZIP}
+      </h1>
+      <p class="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto mb-8 leading-relaxed">
+        {INTRO}
+      </p>
+
+      <!-- Call button (inline SVG phone icon) -->
+      <a href={PHONE_TEL}
+         class="inline-flex items-center gap-3 bg-accent hover:bg-accent-hover text-white font-bold text-lg px-8 py-4 rounded-lg shadow-lg transition transform hover:scale-105">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+        </svg>
+        Call {PHONE_DISPLAY}
+      </a>
+
+      <!-- Reassurance badges (inline SVG shield / truck / clock) -->
+      <div class="flex flex-wrap justify-center gap-x-8 gap-y-3 mt-10 text-sm font-semibold text-gray-100">
+        <span class="inline-flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+          </svg>
+          Verified Local Providers
+        </span>
+        <span class="inline-flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12"/>
+          </svg>
+          Fast Response
+        </span>
+        <span class="inline-flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          Open {HOURS}
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTENU BLANC ============ -->
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-primary mb-6">Why Water Damage Is Common in {CITY}</h2>
+      <p class="text-gray-700 leading-relaxed mb-10">{CONTEXT}</p>
+
+      <h2 class="text-2xl md:text-3xl font-bold text-primary mb-6">Immediate Steps to Take</h2>
+      <ul class="space-y-3 mb-10">
+        {STEPS.map((s, i) => (
+          <li class="flex items-start gap-3 bg-bg-light border border-gray-100 rounded-lg p-4">
+            <span class="flex-shrink-0 w-7 h-7 bg-accent/10 text-accent rounded-full flex items-center justify-center text-sm font-bold">{i + 1}</span>
+            <span class="text-gray-600">{s}</span>
+          </li>
+        ))}
+      </ul>
+
+      <!-- CTA principal corps de page — vrai bouton UI -->
+      <div class="bg-bg-light border border-gray-200 rounded-xl p-8 text-center mb-10">
+        <p class="text-xl font-bold text-primary mb-4">Need immediate help in {CITY}?</p>
+        <a href={PHONE_TEL}
+           class="inline-flex items-center gap-3 bg-accent hover:bg-accent-hover text-white font-bold text-lg px-8 py-4 rounded-lg shadow transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+          </svg>
+          Call {PHONE_DISPLAY}
+        </a>
+        <p class="text-xs text-gray-500 mt-4">Our {HOURS} local dispatch is standing by to connect you with verified water damage professionals serving {COUNTY} and the {CITY} area. By calling this number, you consent to being connected with a third-party service provider and to the recording of your call for quality assurance and compliance purposes. Read our <a href="/privacy-policy" class="underline">Privacy Policy</a> for full TCPA &amp; CCPA disclosures.</p>
+      </div>
+
+      <h2 class="text-2xl md:text-3xl font-bold text-primary mb-6">Nearby Service Areas</h2>
+      <ul class="grid md:grid-cols-2 gap-3">
+        {NEARBY.map((n) => (
+          <li>
+            <a href={`/${n.slug}/`} class="block bg-bg-light hover:bg-gray-soft border border-gray-200 rounded-lg px-4 py-3 text-primary font-semibold transition">
+              💧 Water Damage Help in {n.city}, CA
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</Layout>
